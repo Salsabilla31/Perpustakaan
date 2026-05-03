@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36301.6
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PerpustakaanAPP.Api", "PerpustakaanAPP.Api\PerpustakaanAPP.Api.csproj", "{9FD14352-AF69-4CB3-9CB4-93C959386F95}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PerpustakaanAPP.Data.Access", "PerpustakaanAPP.Data.Access\PerpustakaanAPP.Data.Access.csproj", "{E6DB4491-923B-4EA0-8A0B-1EE6D0880DC5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9FD14352-AF69-4CB3-9CB4-93C959386F95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FD14352-AF69-4CB3-9CB4-93C959386F95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FD14352-AF69-4CB3-9CB4-93C959386F95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FD14352-AF69-4CB3-9CB4-93C959386F95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6DB4491-923B-4EA0-8A0B-1EE6D0880DC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6DB4491-923B-4EA0-8A0B-1EE6D0880DC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6DB4491-923B-4EA0-8A0B-1EE6D0880DC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6DB4491-923B-4EA0-8A0B-1EE6D0880DC5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F28E26AB-DD07-4E0F-BEC3-3908D91A34D4}
+	EndGlobalSection
+EndGlobal
