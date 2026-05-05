@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 using PerpustakaanAPP.Api.Areas.AreaBook.Services;
 using PerpustakaanAPP.Api.Areas.Rack.Services;
+using PerpustakaanAPP.Api.Areas.Storage.Services;
 using PerpustakaanAPP.Api.Common.Extentions;
 using PerpustakaanAPP.Api.Helpers;
 using PerpustakaanAPP.Data.Access.Models;
@@ -22,6 +23,7 @@ namespace PerpustakaanAPP.Api
             // Registrasi service custom
             builder.Services.AddScoped<AreaBookService>();
             builder.Services.AddScoped<RackService>();
+            builder.Services.AddScoped<StorageService>();
             // Add services to the container.
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

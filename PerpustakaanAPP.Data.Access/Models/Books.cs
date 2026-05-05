@@ -19,5 +19,13 @@ public partial class Books
 
     public int? Pagebook { get; set; }
 
+    public DateTime? Createdate { get; set; }
+
+    public string? Createby { get; set; }
+
+    public DateTime? Modifydate { get; set; }
+
+    public string? Modifyby { get; set; }
+
     public virtual ICollection<Storages> Storages { get; set; } = new List<Storages>();
 }

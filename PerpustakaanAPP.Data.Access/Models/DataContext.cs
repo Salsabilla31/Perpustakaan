@@ -78,16 +78,16 @@ namespace PerpustakaanAPP.Data.Access.Models
                 entity.ToTable("STORAGES");
 
                 entity.Property(e => e.Storageid).HasColumnName("STORAGEID");
-                entity.Property(e => e.Books).HasColumnName("BOOKS");
-                entity.Property(e => e.Racks).HasColumnName("RACKS");
+                entity.Property(e => e.Bookid).HasColumnName("BOOKID");
+                entity.Property(e => e.Rackid).HasColumnName("RACKID");
 
                 entity.HasOne(d => d.BooksNavigation).WithMany(p => p.Storages)
-                    .HasForeignKey(d => d.Books)
+                    .HasForeignKey(d => d.Bookid)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK__STORAGES__BOOKS__656C112C");
 
                 entity.HasOne(d => d.RacksNavigation).WithMany(p => p.Storages)
-                    .HasForeignKey(d => d.Racks)
+                    .HasForeignKey(d => d.Rackid)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK__STORAGES__RACKS__66603565");
             });
@@ -106,12 +106,26 @@ namespace PerpustakaanAPP.Data.Access.Models
 
             foreach (var entry in entries)
             {
+                if (entry.Entity is Books book)
+                {
+                    if (entry.State == EntityState.Added)
+                    {
+                        book.Createdate = DateTime.Now;
+                        book.Createby = Environment.UserName;
+                    }
+                    else if (entry.State == EntityState.Modified)
+                    {
+                        book.Modifydate = DateTime.Now;
+                        book.Modifyby = Environment.UserName;
+                    }
+                }
+
                 if (entry.Entity is AreaBook area)
                 {
                     if (entry.State == EntityState.Added)
                     {
                         area.Createdate = DateTime.Now;
-                        area.Createby = Environment.UserName; // bisa diganti HttpContext.User.Identity.Name
+                        area.Createby = Environment.UserName; 
                     }
                     else if (entry.State == EntityState.Modified)
                     {
